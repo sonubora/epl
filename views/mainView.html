@@ -29,7 +29,7 @@
   <thead>
     <tr class="table-primary">
       <th scope="col">
-        <a href="#" ng-click="sortType = 'team1.code'; sortReverse = !sortReverse; mainCtrl.sortBy='Team 1';  ">
+        <a href ng-click="sortType = 'team1.code'; sortReverse = !sortReverse; mainCtrl.sortBy='Team 1';  ">
             Team 1
             <span  ng-show =" mainCtrl.sortBy=== 'None : Click Table Heading to sort the data'" class="fa fa-sort" > </span>
             <span ng-show="sortType == 'team1.code' && ! sortReverse" class="fa fa-caret-down"></span>
@@ -37,7 +37,7 @@
           </a>
         </th>
       <th scope="col">
-        <a href="#" ng-click="sortType = 'team2.code'; sortReverse = !sortReverse; mainCtrl.sortBy='Team 2'">
+        <a href ng-click="sortType = 'team2.code'; sortReverse = !sortReverse; mainCtrl.sortBy='Team 2'">
             Team 2 
             <span  ng-show =" mainCtrl.sortBy=== 'None : Click Table Heading to sort the data'" class="fa fa-sort" > </span>
             <span ng-show="sortType == 'team2.code' && !sortReverse" class="fa fa-caret-down"></span>
@@ -47,7 +47,7 @@
 
       </th>
       <th scope="col">
-        <a href="#" ng-click="sortType = 'score1'; sortReverse = !sortReverse; mainCtrl.sortBy='Score'">
+        <a href ng-click="sortType = 'score1'; sortReverse = !sortReverse; mainCtrl.sortBy='Score'">
             Score 
              <span  ng-show =" mainCtrl.sortBy=== 'None : Click Table Heading to sort the data'" class="fa fa-sort" > </span>
             <span ng-show="sortType == 'score1' && !sortReverse" class="fa fa-caret-down"></span>
@@ -57,7 +57,7 @@
 
       </th>
       <th scope="col">
-        <a href="#" ng-click="sortType = 'date'; sortReverse = !sortReverse; mainCtrl.sortBy='Date'">
+        <a href ng-click="sortType = 'date'; sortReverse = !sortReverse; mainCtrl.sortBy='Date'">
             Date 
             <span  ng-show =" mainCtrl.sortBy=== 'None : Click Table Heading to sort the data'" class="fa fa-sort" > </span>
             <span ng-show=" sortType == 'date' && !sortReverse" class="fa fa-caret-down"></span>
