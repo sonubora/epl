@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myNgApp'>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>English Premier League</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- awesome font-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+
+
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="#!/">EPL</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#!/"> All Matches</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#!/statistics">Team Statistics</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+
+    <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 col-sm-10 mx-auto">
+            <div class="site-heading">
+              <h1>English Premier League</h1>
+              <span class="subheading"> Get Everything for 2015-16 and 2016-17 EPL</span>
+             
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    
+    </header>
+  
+
+
+    <!-- Main Content -->
+
+    <div class="container " id="viewPart" >
+         <div ng-view >
+         </div>
+    </div>
+
+
+     <!-- Pager -->
+
+         
+    <hr>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <h4 class="copyright text-muted">Contact Me</h4>
+            <p class="copyright text-muted">Sonu Bora</p>
+            <p class="copyright text-muted"> Mob. No : +919536336639</p>
+            <p class="copyright text-muted">sonubora111@gmail.com</p>
+            <p class="copyright text-muted">Created using Bootstrap framework</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Angular JS file -->
+
+     <script src="js/angular/angular.min.js"></script>
+     <script type="text/javascript" src="https://code.angularjs.org/1.6.7/angular-route.js"></script>
+       <script src="js/angular/myApp.js"></script>
+       <script src="js/angular/route.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.js"></script>
+
+
+
+ 
+
+  </body>
+
+</html>

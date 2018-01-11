@@ -1,0 +1,86 @@
+<!-- Statistics -->
+
+<div class="row" >
+  <div class="col-12 " style="background-color: #e8f2f1" >
+
+    <div style="text-align: center;">
+      <br>
+
+      <h1 >Team Statistics</h1>
+     </div>
+
+
+ <!-- Card for Count Team Stats-->
+
+  <div class="card" style="width: 18rem;" >
+      <div class="card-header text-danger">
+        {{statCtrl.teamOptionValue}}
+      </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Total Match : {{statCtrl.count}}</li>
+        <li class="list-group-item">Match Won   : {{statCtrl.win}}</li>
+        <li class="list-group-item">Match Lost  : {{statCtrl.lost}}</li>
+        <li class="list-group-item">Draw        : {{statCtrl.draw}}</li>
+    </ul>
+  </div>
+
+ 
+
+  <!-- Select Option Input field -->
+
+  <div class="card-title" style="float: right;">Select the Team :
+       <select ng-model="teamName" ng-options="match as match.team1.name for match in statCtrl.matchDetails | unique :'team1'" 
+        ng-change= "statCtrl.changedValue(teamName)">
+        <option value="" selected="true" disabled="disabled" >Select Team</option>
+       </select>
+   </div> 
+
+ <!-- Table -->
+
+ <div class="table-responsive">
+  <table class="table table-dark" >
+   	<thead>
+   	 <tr >
+   	 	   <th>Date</th>
+         <th>Match</th>
+         <th>Result</th>
+   	 	   <th>Score</th>
+     </tr>
+       <thead ng-repeat="match in statCtrl.matchDetails ">
+         
+    <tr ng-if="statCtrl.getTeamName(match)==='W'">
+       <td>{{match.date}}</td>
+       <td>{{match.team1.name}} <span class="text-danger">vs</span> {{match.team2.name}}</td>
+       <td class="text-success">W</td>
+       <td>{{match.score1}}-{{match.score2}}</td> 
+    </tr> 
+
+     <tr ng-if="statCtrl.getTeamName(match)==='L'">
+       <td>{{match.date}}</td>
+       <td>{{match.team1.name}} <span class="text-danger">vs</span> {{match.team2.name}}</td>
+       <td class="text-danger">L</td>
+       <td>{{match.score1}}-{{match.score2}}</td> 
+    </tr> 
+
+     <tr ng-if="statCtrl.getTeamName(match)==='D'">
+       <td>{{match.date}}</td>
+       <td>{{match.team1.name}} <span class="text-danger">vs</span> {{match.team2.name}}</td>
+       <td>D</td>
+       <td>{{match.score1}}-{{match.score2}}</td> 
+    </tr> 
+
+       </thead>
+   	
+    </thead>
+   </table>
+
+   </div> 
+
+
+	
+
+
+
+
+   </div>
+</div>

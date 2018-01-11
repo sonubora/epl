@@ -1,0 +1,42 @@
+<div class="row" >
+   <div class="col-12"  style="background-image: url('img/soccer.jpg')">
+
+  <div style="text-align: center;">
+	    <br>
+            <h2 class="card-title text-dark"><u>Match Detail</u></h2><br>
+            <h5 class="card-title text-white"> Round :<h1 class="card-title text-white">  {{matchCtrl.roundName}} </h1></h5>
+                    
+                 
+            <h1 class="card-title text-warning" >{{matchCtrl.singleMatchData.team1.name}}</h1>  
+            <h3 class="card-title text-danger">vs</h3>   
+            <h1 class="card-title text-warning" >{{matchCtrl.singleMatchData.team2.name}}</h1>
+       
+            <div class="card-body text-white">
+             <h4>Score</h4>  <h1>{{matchCtrl.singleMatchData.score1}} - {{matchCtrl.singleMatchData.score2}}</h1>
+            </div>
+
+            <h5 class="card-title text-white bg-secondary">Match Date :  {{matchCtrl.singleMatchData.date | date}}</h5>
+
+            <a href="#!/" class="btn btn-secondary">Go Back</a><br>
+
+
+   </div>
+
+
+
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+         </div>
