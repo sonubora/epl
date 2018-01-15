@@ -3,17 +3,19 @@
        <div class="row"  >
           <div class="col-12" >
 
+ 
 
+ 
 
         
-           <div class="card text-center border-success mb-3"  style="background-image: url('img/soccer.jpg')"> 
+           <div class="card text-center border-success mb-3"  style="background-color: #F4FAAF" > 
              
                   <div class="card-body  ">
                        <h1 class="card-title text-dark" style="font-family: serif;"><b>All Match Details</b></h1><br>
                       
-                      <h5 class="card-text text-warning" >Total Match Played : <h6 class="card-text text-white">{{(mainCtrl.matchDetails | filter:filterInput).length}}</h6></h5>
+                      <h5 class="card-text text-danger" >Total Match Played : <h6 class="card-text text-success">{{(mainCtrl.matchDetails | filter:filterInput).length}}</h6></h5>
                <br>
-      <div class="card-title text-white">
+      <div class="card-title text-primary">
 
           <b>Search :</b>
            <input type="text" name="filter" ng-model="filterInput" placeholder="Enter Team name,code here..">
@@ -22,7 +24,7 @@
         </div>
 
          
-       <p> <b class="card-title text-warning">Currently Sort By:</b><span class="card-title text-white"><b>{{mainCtrl.sortBy}}</b></span></p>
+       <p> <b class="card-title text-primary">Currently Sort By:</b><span class="card-title text-success"><b>{{mainCtrl.sortBy}}</b></span></p>
 
       
 
@@ -83,24 +85,33 @@
 
     </tr>
   </thead>
-  <tbody ng-repeat="match in mainCtrl.matchDetails | filter:filterInput | orderBy: sortType:sortReverse " >
-    
+  <tbody  dir-paginate = "match in mainCtrl.matchDetails | filter: filterInput | orderBy:sortType:sortReverse | itemsPerPage: 10">
 
-      <tr class="table-secondary" ng-click="mainCtrl.goToMatchDetails(match)">
-         
+        <tr class="table-secondary" ng-click="mainCtrl.goToMatchDetails(match)">
+            
             <td>{{match.team1.code}}</td>
             <td>{{match.team2.code}}</td>
             <td>{{match.score1}}-{{match.score2}}</td>
             <td>{{match.date | date}}</td>
-         
-     </tr>
+        </tr>
      
   </tbody>
 </table>
+ 
+ 
 
+ </div>
 
+<div class="pagination" >
+   <dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true"
+       template-url= "views/dirPagination.tpl.html"
+        >
 
-
+     </dir-pagination-controls>
+     
 
 
         </div> <!--end of col -->

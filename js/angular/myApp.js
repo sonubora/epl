@@ -1,4 +1,4 @@
-var myApp = angular.module("myNgApp",['ngRoute', 'ui.filters']);
+var myApp = angular.module("myNgApp",['ngRoute', 'ui.filters','angularUtils.directives.dirPagination']);
 
 
 
@@ -48,6 +48,11 @@ this.goToMatchDetails = function(match) {
   $location.path('/matchDetails/' + match.date+'/'+match.team1.code+'/'+match.team2.code);
 };
 
+    
+    
+    
+    
+    
 
 }]); //end of  main controller
 
