@@ -46,7 +46,7 @@
          <th>Result</th>
    	 	   <th>Score</th>
      </tr>
-       <thead ng-repeat="match in statCtrl.matchDetails ">
+       <thead dir-paginate="match in statCtrl.matchDetails |itemsPerPage: 60 ">
          
     <tr ng-if="statCtrl.getTeamName(match)==='W'">
        <td>{{match.date}}</td>
@@ -76,7 +76,17 @@
 
    </div> 
 
+     
+<div class="pagination" >
+   <dir-pagination-controls
+       max-size="5"
+       direction-links="true"
+       boundary-links="true"
+       template-url= "views/dirPagination.tpl.html"
+        >
 
+     </dir-pagination-controls>
+     
 	
 
 
