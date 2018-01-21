@@ -1,40 +1,24 @@
-<div class="row" >
-   <div class="col-12"  style="background-color: #e8f2f1" >
-
-  <div style="text-align: center;">
-	    <br>
-            <h2 class="card-title text-dark"><u>Match Detail</u></h2><br>
-            
-            <h5 class="card-title text-success"> Round :<h1 class="card-title text-primary">  {{matchCtrl.roundName}} </h1></h5>
-          <br>
-                    
-                 
-            <h1 class="card-title text-danger" >{{matchCtrl.singleMatchData.team1.name}}</h1>  
-            <h3 class="card-title text-dark">vs</h3>   
-            <h1 class="card-title text-danger" >{{matchCtrl.singleMatchData.team2.name}}</h1>
-       
-            <div class="card-body text-dark">
-             <h4>Score</h4>  <h1>{{matchCtrl.singleMatchData.score1}} - {{matchCtrl.singleMatchData.score2}}</h1>
-            </div>
-
-            <h5 class="card-title text-white bg-secondary">Match Date :  {{matchCtrl.singleMatchData.date | date}}</h5>
-
-            <a href="#!/" class="btn btn-secondary">Go Back</a><br>
-
-
+       <div class="row">
+   <div class=" col-md-12 text-center">
+      <h3 class="colHid1 colHid2"> {{matchCtrl.roundName}}</h3>
+      <h3>{{matchCtrl.singleMatchData.date | date}}</h3>
    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
+   <div class="col-xs-4 col-md-4">
+      <img ng-src = "logo/{{matchCtrl.singleMatchData.team1.code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <h4 class="text-center">{{matchCtrl.singleMatchData.team1.name}}</h4>
+      <h5 class="text-center"> Goals : {{matchCtrl.singleMatchData.score1}}</h5>
+   </div>
+   <div class="col-xs-4 col-md-4 text-center">
+      <br/><br/><br/>
+      <span class="colHid1 colHid2"><img src="logo/vs.png" style="height:50px;width:50px "></span>
+   </div>
+   <div class="col-xs-4 col-md-4">
+      <img ng-src = "logo/{{matchCtrl.singleMatchData.team2.code}}.png" class="img-responsive" style="height:auto;width:440px">
+      <h4 class="text-center">{{matchCtrl.singleMatchData.team2.name}}</h4>
+      <h5 class="text-center">Goals : {{matchCtrl.singleMatchData.score2}}</h5>
+   </div>
 </div>
-         </div>
+<div class="row">
+   <a href="#!/" class="btn btn-secondary">Go Back</a><br>
+  
+</div>
